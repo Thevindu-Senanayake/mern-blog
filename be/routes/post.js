@@ -63,3 +63,26 @@ module.exports = router.delete("/post/delete/:id", (req, res) => {
             });
         }
         return res.status(200).json({
+            success: "Post deleted successfully", deletedPost
+        });
+    });
+});
+
+// get specific post
+module.exports = router.get("/post/:id", (req, res) => {
+
+    let postId = req.params.id;
+
+    Post.findById(postId, (err, post) => {
+        if (err) {
+            return res.status(400).json({
+                success: false,
+                error: err,
+            });
+        }
+        return res.status(200).json({
+            success: true,
+            post
+        });
+    });
+});
