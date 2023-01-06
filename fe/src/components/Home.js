@@ -40,16 +40,17 @@ export default class Home extends Component {
                             <tr>
                                 <th scope="row">1</th>
                                 <td>
-                                    <a href={`/post/${posts._id}`} style={{ textDecoration: "none" }}>{posts.topic}</a>
+                                    {/* {{`/post/${posts._id}`}} */}
+                                    <a href="#" style={{ textDecoration: "none" }}>{posts.topic}</a>
                                 </td>
                                 <td>{posts.description}</td>
                                 <td>{posts.category}</td>
                                 <td>
-                                    <a href="" className="btn btn-warning">
+                                    <a href="#" className="btn btn-warning">
                                         <i className="fa fa-edit"></i>&nbsp;Edit
                                     </a>
                                     &nbsp;
-                                    <a href="" className="btn btn-danger">
+                                    <a href="#" className="btn btn-danger">
                                         <i className="fa fa-trash"></i>&nbsp;Delete
                                     </a>
                                 </td>
